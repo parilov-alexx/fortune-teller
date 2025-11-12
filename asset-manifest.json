@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/fortune-teller/static/css/main.70993719.css",
+    "main.js": "/fortune-teller/static/js/main.aab45164.js",
+    "static/media/wizard.png": "/fortune-teller/static/media/wizard.1844ad9700acb972fe38.png",
+    "index.html": "/fortune-teller/index.html",
+    "main.70993719.css.map": "/fortune-teller/static/css/main.70993719.css.map",
+    "main.aab45164.js.map": "/fortune-teller/static/js/main.aab45164.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70993719.css",
+    "static/js/main.aab45164.js"
+  ]
+}
