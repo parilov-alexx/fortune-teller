@@ -1,0 +1,283 @@
+.oracle-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.oracle-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.oracle-image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.oracle-image {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Стили для изображения волшебника */
+.wizard-image {
+  max-width: 60%;
+
+  width: auto;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+
+/* Стили для выноски */
+.speech-bubble {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  border-radius: 25px;
+  padding: 20px 20px;
+  max-width: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  margin-top: 5%;
+}
+
+.speech-bubble:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+.bubble-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.bubble-text.answer {
+  color: #8e44ad;
+  font-size: 16px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Анимация магии */
+.magic-animation {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.nebula {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00cc, #3333ff, #00ccff);
+  border-radius: 50%;
+  animation: rotate 3s linear infinite;
+  opacity: 0.8;
+  filter: blur(8px);
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+.star-1 { top: 20px; left: 20px; width: 4px; height: 4px; animation-delay: 0s; }
+.star-2 { top: 60px; right: 30px; width: 3px; height: 3px; animation-delay: 0.5s; }
+.star-3 { bottom: 40px; left: 40px; width: 5px; height: 5px; animation-delay: 1s; }
+.star-4 { bottom: 20px; right: 20px; width: 4px; height: 4px; animation-delay: 1.5s; }
+
+.magic-sparkle {
+  position: absolute;
+  background: gold;
+  border-radius: 50%;
+  animation: sparkle 1.5s infinite;
+}
+
+.sparkle-1 { top: 30px; left: 50%; width: 6px; height: 6px; animation-delay: 0s; }
+.sparkle-2 { top: 50%; right: 40px; width: 8px; height: 8px; animation-delay: 0.3s; }
+.sparkle-3 { bottom: 30px; left: 60px; width: 7px; height: 7px; animation-delay: 0.6s; }
+
+/* Анимации */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Стили контента */
+.oracle-content {
+  min-height: 120px;
+}
+
+.question-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.question-input {
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.question-input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.question-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ask-button {
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ask-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ask-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Состояние размышления */
+.thinking-state {
+  text-align: center;
+}
+
+.thinking-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ffd700;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Состояние ответа */
+.answer-state {
+  text-align: center;
+}
+
+.new-question-button {
+  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.new-question-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .oracle-card {
+    padding: 5%;
+    margin: 10px;
+  }
+  .speech-bubble {
+    margin-top: 0%;
+  }
+  .bubble-text {
+    font-size: 16px;
+  }
+  
+  .bubble-text.answer {
+    font-size: 14px;
+  }
+  
+  .wizard-image {
+    max-width: 60%
+  }
+}
